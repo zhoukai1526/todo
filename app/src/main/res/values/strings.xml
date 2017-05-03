@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ToDoApplication</string>
+
+    <string name="loading">加载中&#8230;</string>
+    <string name="result_is_null">服务器错误:解析结果为空</string>
+    <string name="app_error_net">网络异常</string>
+    <string name="app_error_service">服务器异常</string>
+</resources>
