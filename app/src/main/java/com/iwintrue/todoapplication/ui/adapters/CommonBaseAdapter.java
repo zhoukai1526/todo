@@ -50,6 +50,7 @@ public abstract class CommonBaseAdapter<T> extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
+
         return list.get(position);
     }
 
@@ -58,8 +59,26 @@ public abstract class CommonBaseAdapter<T> extends BaseAdapter {
         return position;
     }
 
+//    @Override
+//    public int getViewTypeCount() {
+//        return 2;
+//    }
+//
+//    @Override
+//    public int getItemViewType(int position) {
+//        return super.getItemViewType(position);
+//    }
+
+    /**
+     * 缓存数目是全屏数目+1
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
 
         CommonViewHolder viewHolder = null;
         if(convertView==null){
@@ -68,6 +87,7 @@ public abstract class CommonBaseAdapter<T> extends BaseAdapter {
             convertView.setTag(viewHolder);
         }else {
             viewHolder = (CommonViewHolder) convertView.getTag();
+
         }
 
         //设置数据

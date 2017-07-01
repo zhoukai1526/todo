@@ -2,19 +2,30 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.iwintrue.todoapplication">
 
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
 
     <application
+        android:name=".SimpleTinkerInApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".deletephotos.DeletePhotoAty" />
-        <activity android:name=".tts.TtsAty">
+        <meta-data
+            android:name="zhouzhou"
+            android:value="这是key" />
+
+        <activity android:name=".MainActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -23,16 +34,77 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".vlayouts.VAty">
+        <activity android:name=".deletephotos.DeletePhotoAty" />
+        <activity android:name=".tts.TtsAty">
+            <meta-data
+                android:name="bbb"
+                android:value="TtsAty" />
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".vlayouts.VAty" />
+        <activity android:name=".ui.adapters.AdapterAty" />
+        <activity android:name=".ui.adapters.MulTypeAty" />
+        <activity android:name=".permission.PermissionAty" />
+        <activity android:name=".PuGuangActivity" />
+        <activity
+            android:name=".SpanAty"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="zhouzhou"
+                android:value="SpanAty" />
+        </activity>
+
+        <receiver android:name=".BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".MyServise" />
+
+        <activity android:name=".PatchAty"></activity>
+        <activity android:name=".annotation.AnnotationAty">
 
         </activity>
 
-        <activity android:name=".ui.adapters.AdapterAty">
+        <service
+            android:name=".SampleResultService"
+            android:exported="false" />
+
+        <!-- 别忘了配置一下tinkerId -->
+        <meta-data
+            android:name="TINKER_ID"
+            android:value="100" />
+
+        <activity android:name=".annotation.AnnotationAty2">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".annotation2.Parent">
+
+
+        </activity>
+
+        <activity android:name=".annotation2.Child">
 
         </activity>
     </application>

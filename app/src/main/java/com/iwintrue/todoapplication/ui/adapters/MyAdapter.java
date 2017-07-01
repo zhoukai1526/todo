@@ -2,8 +2,8 @@ package com.iwintrue.todoapplication.ui.adapters;
 
 import android.content.Context;
 
+import com.iwintrue.commonlibrary.data.bean.BaseBean;
 import com.iwintrue.todoapplication.R;
-import com.iwintrue.todoapplication.io.BaseEntity;
 
 import java.util.List;
 
@@ -11,15 +11,15 @@ import java.util.List;
  * Created by zhoukai on 2017/5/4.
  */
 
-public class MyAdapter extends CommonBaseAdapter<BaseEntity> {
+public class MyAdapter extends CommonBaseAdapter<BaseBean> {
 
-    public MyAdapter(Context context, List<BaseEntity> list,int layoutId) {
+    public MyAdapter(Context context, List<BaseBean> list, int layoutId) {
         super(context, list,layoutId);
     }
 
 
     @Override
-    public void setData(CommonViewHolder viewHolder,  List<BaseEntity> list,int position) {
+    public void setData(CommonViewHolder viewHolder, List<BaseBean> list, int position) {
 
         viewHolder.setText(R.id.tv_code,list.get(position).code+"");
         viewHolder.setText(R.id.tv_code,list.get(position).msg);

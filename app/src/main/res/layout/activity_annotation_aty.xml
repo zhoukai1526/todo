@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_annotation_aty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="com.iwintrue.todoapplication.annotation.AnnotationAty">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+       >
+
+
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/logo"
+            android:onClick="share"
+            />
+
+
+        <TextView
+            android:id="@+id/td_topbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:singleLine="true"
+            android:gravity="center"
+            android:text="厕所详情"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="button"
+            android:tag="btn1"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="button"
+            android:tag="btn2"/>
+
+
+
+
+</LinearLayout>

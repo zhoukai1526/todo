@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_permission_aty"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.iwintrue.todoapplication.MainActivity">
+    tools:context="com.iwintrue.todoapplication.permission.PermissionAty">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+
     <Button
-        android:layout_centerInParent="true"
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="请求"
-        android:onClick="click"/>
+        android:text="检查权限"/>
+
 </RelativeLayout>

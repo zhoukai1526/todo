@@ -9,6 +9,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.iwintrue.todoapplication.ui.adapters.glide.GlideCircleTransform;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by zhoukai on 2017/5/4.
  */
@@ -19,6 +22,7 @@ public class CommonViewHolder  {
     private SparseArray<View> views;
     private Context context;
     private final GlideCircleTransform transform;
+    private List<Integer> checkPositions  = new ArrayList<>();
 
     public CommonViewHolder(View convertView) {
 
